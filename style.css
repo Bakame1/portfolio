@@ -177,7 +177,23 @@ section {
   .icon, .link-btn { transition: none; }
 }
 
+/* Style de base de l'élément */
+article.project {
+  /* Ajoute une transition douce pour l'effet de grossissement */
+  transition: transform 0.1s ease-in-out; 
+}
 
+/* Style appliqué lorsque la souris est sur l'élément */
+article.project:hover {
+  /* Fait grossir l'élément de 10% */
+  transform: scale(1.08); 
+  /* Vous pouvez aussi ajouter d'autres effets, comme une ombre */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+a.project-link {
+  color: inherit; /* Fait en sorte que le texte hérite de la couleur de son parent */
+  text-decoration: none; /* Supprime le soulignement du lien */
+}
 /* Pop-up de contact */
 .popup-overlay {
   display: none;
