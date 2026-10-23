@@ -52,6 +52,58 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  document.querySelectorAll('.project-modal-trigger').forEach(function(projectTrigger) {
+    const projectPopup = document.getElementById(projectTrigger.getAttribute('aria-controls'));
+    const projectCloseButton = projectPopup && projectPopup.querySelector('.close-project-popup');
+
+    if (!projectPopup || !projectCloseButton) {
+      return;
+    }
+
+    const closeProjectPopup = function() {
+      projectPopup.style.display = 'none';
+      projectTrigger.focus();
+    };
+
+    projectTrigger.addEventListener('click', function(event) {
+      event.preventDefault();
+      projectPopup.style.display = 'flex';
+      projectCloseButton.focus();
+    });
+
+    projectCloseButton.addEventListener('click', closeProjectPopup);
+
+    projectPopup.addEventListener('click', function(event) {
+      if (event.target === projectPopup) {
+        closeProjectPopup();
+      }
+    });
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' && projectPopup.style.display === 'flex') {
+        closeProjectPopup();
+      }
+    });
+
+    projectPopup.addEventListener('keydown', function(event) {
+      if (event.key !== 'Tab') {
+        return;
+      }
+
+      const focusableElements = Array.from(projectPopup.querySelectorAll('a[href], button:not([disabled])'));
+      const firstElement = focusableElements[0];
+      const lastElement = focusableElements[focusableElements.length - 1];
+
+      if (event.shiftKey && document.activeElement === firstElement) {
+        event.preventDefault();
+        lastElement.focus();
+      } else if (!event.shiftKey && document.activeElement === lastElement) {
+        event.preventDefault();
+        firstElement.focus();
+      }
+    });
+  });
+
   // Gère la soumission du formulaire
   const contactForm = document.querySelector('.contact-form');
   if (contactForm) {
@@ -79,4 +131,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
-

@@ -59,6 +59,28 @@
     <section aria-labelledby="projects-title">
       <h2 id="projects-title" class="section-title">Projects</h2>
       <div class="projects">
+        <a href="#mcpProjectPopup" class="project-link project-modal-trigger" aria-haspopup="dialog" aria-controls="mcpProjectPopup" aria-label="View details about the MCP server for Khiops AutoML project">
+          <article class="project" aria-labelledby="proj1-title">
+            <img src="img/MCP_project.jpg" alt="Project MCP image" />
+            <div class="project-body">
+              <h3 id="proj1-title" style="font-size:16px;margin-bottom:2px">MCP server for Khiops AutoML - Orange</h3>
+              <p class="project-desc">Link an AutoML app to a LLM. </br></br><i><b>Click to read more.</b></i></p>
+              <div class="project-tech">MCP, Python, OpenShift</div>
+            </div>
+          </article>
+        </a>
+
+        <a href="#ragProjectPopup" class="project-link project-modal-trigger" aria-haspopup="dialog" aria-controls="ragProjectPopup" aria-label="View details about the Khiops documentation helper project">
+          <article class="project" aria-labelledby="rag-project-title">
+            <img src="img/RAG_project.jpg" alt="Khiops RAG documentation - Orange" />
+            <div class="project-body">
+              <h3 id="rag-project-title" style="font-size:16px;margin-bottom:2px">Khiops Documentation Helper - RAG</h3>
+              <p class="project-desc">Hybrid search assistant for Khiops documentation. <br/><br/><i><b>Click to read more.</b></i></p>
+              <div class="project-tech">RAG, Python, Qdrant, MCP</div>
+            </div>
+          </article>
+        </a>
+
         <a href="https://github.com/MorganPhlp/oikos" class="project-link" target="_blank">
           <article class="project" aria-labelledby="proj1-title">
             <img src="img/projet1.png" alt="Project 1 image" />
@@ -224,6 +246,40 @@
         </div>
       </article>
     </section>
+
+    <div id="mcpProjectPopup" class="popup-overlay project-popup-overlay">
+      <div class="popup-content project-popup-content" role="dialog" aria-modal="true" aria-labelledby="mcpProjectTitle" aria-describedby="mcpProjectDescription">
+        <button type="button" class="close-project-popup" aria-label="Close project details">&times;</button>
+        <img class="project-popup-image" src="img/MCP_project.jpg" alt="Illustration of the MCP server for Khiops AutoML project" />
+        <h2 id="mcpProjectTitle">MCP server for Khiops AutoML - Orange</h2>
+        <ul id="mcpProjectDescription" class="project-details">
+          <li>Deterministic MCP tools from the Khiops Python library.</li>
+          <li>Stateless architecture via a database, ensuring persistence.</li>
+          <li>Authentication with Google Cloud Storage to enable ML model training directly on datasets stored in GCS.</li>
+          <li>Intercepted MCP tool calls with a middleware session.</li>
+          <li>Tested on different MCP clients: Dinootoo, Prisme AI, GitHub Copilot, and Continue on VS Code.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="ragProjectPopup" class="popup-overlay project-popup-overlay">
+      <div class="popup-content project-popup-content" role="dialog" aria-modal="true" aria-labelledby="ragProjectTitle" aria-describedby="ragProjectDescription">
+        <button type="button" class="close-project-popup" aria-label="Close project details">&times;</button>
+        <img class="project-popup-image" src="img/RAG_project.jpg" alt="Illustration of the Khiops documentation helper RAG project" />
+        <h2 id="ragProjectTitle">Khiops Documentation Helper - RAG</h2>
+        <ul id="ragProjectDescription" class="project-details">
+          <li>Parses documents in .md, .py, .ipynb, and .rst formats.</li>
+          <li>Chunks documents by section headers.</li>
+          <li>Embeds chunks as dense vectors (sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2) and sparse vectors (BM25).</li>
+          <li>Saves them in Qdrant as unique points containing both vectors.</li>
+          <li>Uses HNSW indexing for dense vectors and an inverted index for sparse vectors.</li>
+          <li>Performs hybrid search by merging rankings with RRF and DBSF.</li>
+          <li>Evaluates results with Recall@k, Precision@k, and MRR.</li>
+          <li>Connects to an LLM through two MCP tools: one returns relevant chunks, and the other retrieves the content of a specific document.</li>
+        </ul>
+        <a class="link-btn project-github-link" href="https://github.com/Bakame1/khiops_doc_RAG" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+      </div>
+    </div>
 
     <!-- Contact Popup -->
     <div id="contactPopup" class="popup-overlay">

@@ -194,6 +194,21 @@ a.project-link {
   color: inherit; /* Fait en sorte que le texte hérite de la couleur de son parent */
   text-decoration: none; /* Supprime le soulignement du lien */
 }
+button.project-link {
+  display: block;
+  width: 100%;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+button.project-link:focus-visible {
+  outline: 3px solid var(--text-base-2);
+  outline-offset: 4px;
+  border-radius: 14px;
+}
 /* Pop-up de contact */
 .popup-overlay {
   display: none;
@@ -216,6 +231,56 @@ a.project-link {
   max-width: 500px;
   box-shadow: 0 8px 28px var(--shadow-color);
   position: relative;
+}
+
+.project-popup-overlay {
+  z-index: 1002;
+  padding: 20px;
+}
+
+.project-popup-content {
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.project-popup-image {
+  display: block;
+  width: 100%;
+  max-height: 240px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.close-project-popup {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  padding: 0;
+  color: var(--text-base);
+  font: inherit;
+  font-size: 28px;
+  line-height: 1;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.project-popup-content h2 {
+  padding-right: 28px;
+}
+
+.project-details {
+  margin: 16px 0 0;
+  padding-left: 22px;
+}
+
+.project-details li + li {
+  margin-top: 10px;
+}
+
+.project-github-link {
+  margin-top: 20px;
 }
 
 .popup-content h2 {
