@@ -55,9 +55,31 @@
       <h2 id="projects-title" class="section-title">项目</h2>
       <div class="projects">
         
+        <a href="#mcpProjectPopup" class="project-link project-modal-trigger" aria-haspopup="dialog" aria-controls="mcpProjectPopup" aria-label="查看 Khiops AutoML MCP 服务器项目详情">
+          <article class="project" aria-labelledby="mcp-project-title">
+            <img src="img/project-01-mcp.jpg" alt="Khiops AutoML MCP 项目" />
+            <div class="project-body">
+              <h3 id="mcp-project-title" style="font-size:16px;margin-bottom:2px">Khiops AutoML MCP 服务器 - Orange</h3>
+              <p class="project-desc">将 AutoML 应用连接到大语言模型。<br/><br/><i><b>点击了解详情。</b></i></p>
+              <div class="project-tech">MCP, Python, OpenShift</div>
+            </div>
+          </article>
+        </a>
+
+        <a href="#ragProjectPopup" class="project-link project-modal-trigger" aria-haspopup="dialog" aria-controls="ragProjectPopup" aria-label="查看 Khiops RAG 文档助手项目详情">
+          <article class="project" aria-labelledby="rag-project-title">
+            <img src="img/project-02-rag.jpg" alt="Khiops RAG 文档助手" />
+            <div class="project-body">
+              <h3 id="rag-project-title" style="font-size:16px;margin-bottom:2px">Khiops 文档助手 - RAG</h3>
+              <p class="project-desc">针对 Khiops 文档的混合搜索助手。<br/><br/><i><b>点击了解详情。</b></i></p>
+              <div class="project-tech">RAG, Python, Qdrant, MCP</div>
+            </div>
+          </article>
+        </a>
+
         <a href="https://github.com/MorganPhlp/oikos" class="project-link" target="_blank">
           <article class="project" aria-labelledby="proj1-title">
-            <img src="img/projet1.png" alt="项目 1 图像" />
+            <img src="img/project-03-co2-reduction.png" alt="项目 1 图像" />
             <div class="project-body">
               <h3 id="proj1-title" style="font-size:16px;margin-bottom:2px">减少二氧化碳排放应用 - Viveris</h3>
               <p class="project-desc">由7人团队为Viveris公司开发的项目，旨在以现代且有趣的方式采取环保行动。</p>
@@ -68,7 +90,7 @@
 
         <a href="https://github.com/Bakame1/SJTU_digitAC_Recognition" class="project-link" target="_blank">
           <article class="project" aria-labelledby="proj2-title">
-            <img src="img/projet2.jpg" alt="空调识别" />
+            <img src="img/project-04-ac-recognition.jpg" alt="空调识别" />
             <div class="project-body">
               <h3 id="proj2-title" style="font-size:16px;margin-bottom:0px">空调(AC)图像识别 - 上海交通大学 (SJTU)</h3>
               <p class="project-desc">在角度、光线变化或有视觉障碍的情况下也能准确读取温度。</p>
@@ -79,7 +101,7 @@
 
         <a href="https://github.com/Bakame1/Image_Clustering" class="project-link" target="_blank">
           <article class="project" aria-labelledby="proj3-title">
-            <img src="img/projet3.png" alt="项目 3 图像" />
+            <img src="img/project-05-image-clustering.png" alt="项目 3 图像" />
             <div class="project-body">
               <h3 id="proj3-title" style="font-size:16px;margin-bottom:2px">图像聚类 - 巴黎萨克雷理工学院</h3>
               <p class="project-desc">无监督聚类模型，将955张零食图像分为20类。</p>
@@ -90,7 +112,7 @@
 
         <a href="https://github.com/Bakame1/ET5_NLP_Project_IR" class="project-link" target="_blank">
           <article class="project" aria-labelledby="proj4-title">
-            <img src="img/projet4.png" alt="项目 4 图像" />
+            <img src="img/project-06-wikipedia-search.png" alt="项目 4 图像" />
             <div class="project-body">
               <h3 id="proj4-title" style="font-size:16px;margin-bottom:2px">维基百科搜索引擎 - 巴黎萨克雷理工学院</h3>
               <p class="project-desc">基于2000个维基百科文章文件的搜索引擎。</p>
@@ -101,7 +123,7 @@
 
         <a href="https://github.com/Bakame1/SJTU_Sentimental_Analysis" class="project-link" target="_blank">
           <article class="project" aria-labelledby="proj5-title">
-            <img src="img/projet5.png" alt="项目 5 图像" />
+            <img src="img/project-07-sentiment-analysis.png" alt="项目 5 图像" />
             <div class="project-body">
               <h3 id="proj5-title" style="font-size:16px;margin-bottom:2px">情感分析 - 上海交通大学 (SJTU)</h3>
               <p class="project-desc">将句子分类为消极或积极。</p>
@@ -222,6 +244,47 @@
         </div>
       </article>
     </section>
+
+    <div id="mcpProjectPopup" class="popup-overlay project-popup-overlay">
+      <div class="popup-content project-popup-content" role="dialog" aria-modal="true" aria-labelledby="mcpProjectTitle" aria-describedby="mcpProjectDescription">
+        <button type="button" class="close-project-popup" aria-label="关闭项目详情">&times;</button>
+        <img class="project-popup-image" src="img/project-01-mcp.jpg" alt="Khiops AutoML MCP 服务器项目插图" />
+        <h2 id="mcpProjectTitle">Khiops AutoML MCP 服务器 - Orange</h2>
+        <ul id="mcpProjectDescription" class="project-details">
+          <li>基于 Khiops Python 库实现确定性的 MCP 工具。</li>
+          <li>采用无状态架构并通过数据库确保数据持久化。</li>
+          <li>通过 Google Cloud Storage 身份验证，直接使用存储在 GCS 中的数据集训练机器学习模型。</li>
+          <li>通过中间件会话拦截 MCP 工具调用。</li>
+          <li>已在多个 MCP 客户端上测试：Dinootoo、Prisme AI、GitHub Copilot 和 VS Code 上的 Continue。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="ragProjectPopup" class="popup-overlay project-popup-overlay">
+      <div class="popup-content project-popup-content" role="dialog" aria-modal="true" aria-labelledby="ragProjectTitle" aria-describedby="ragProjectDescription">
+        <button type="button" class="close-project-popup" aria-label="关闭项目详情">&times;</button>
+        <img class="project-popup-image" src="img/project-02-rag.jpg" alt="Khiops RAG 文档助手项目插图" />
+        <h2 id="ragProjectTitle">Khiops 文档助手 - RAG</h2>
+        <ul id="ragProjectDescription" class="project-details">
+          <li>解析 .md、.py、.ipynb 和 .rst 格式的文档。</li>
+          <li>根据章节标题对文档进行分块。</li>
+          <li>将文本块转换为稠密向量 (sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2) 和稀疏向量 (BM25)。</li>
+          <li>将包含两种向量的唯一数据点保存到 Qdrant。</li>
+          <li>稠密向量使用 HNSW 索引，稀疏向量使用倒排索引。</li>
+          <li>通过 RRF 和 DBSF 合并排名，实现混合搜索。</li>
+          <li>使用 Recall@k、Precision@k 和 MRR 评估检索效果。</li>
+          <li>通过两个 MCP 工具连接大语言模型：一个返回相关文本块，另一个检索指定文档的内容。</li>
+        </ul>
+        <a class="link-btn project-github-link" href="https://github.com/Bakame1/khiops_doc_RAG" target="_blank" rel="noopener noreferrer">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 .5C5.73.5.75 5.48.75 11.76c0 4.9 3.17 9.06 7.57 10.53.55.1.75-.24.75-.53v-1.9c-3.08.67-3.73-1.48-3.73-1.48-.5-1.27-1.22-1.61-1.22-1.61-.99-.68.07-.67.07-.67 1.1.08 1.68 1.14 1.68 1.14.97 1.66 2.55 1.18 3.17.9.1-.7.38-1.18.69-1.45-2.46-.28-5.05-1.23-5.05-5.45 0-1.2.43-2.18 1.12-2.95-.11-.28-.49-1.41.11-2.94 0 0 .91-.29 2.98 1.12a10.3 10.3 0 0 1 2.71-.37c.92 0 1.85.12 2.71.37 2.07-1.41 2.98-1.12 2.98-1.12.6 1.53.22 2.66.11 2.94.7.77 1.12 1.76 1.12 2.95 0 4.23-2.6 5.16-5.08 5.43.39.34.73 1.02.73 2.06v3.06c0 .3.2.64.76.53 4.4-1.47 7.57-5.63 7.57-10.53C23.25 5.48 18.27.5 12 .5z" fill="currentColor"/>
+            </svg>
+          </span>
+          <span>GitHub 仓库</span>
+        </a>
+      </div>
+    </div>
 
     <div id="contactPopup" class="popup-overlay">
       <div class="popup-content">

@@ -69,10 +69,32 @@
       <h2 id="projects-title" class="section-title">Projets</h2>
       <div class="projects">
 
+        <a href="#mcpProjectPopup" class="project-link project-modal-trigger" aria-haspopup="dialog" aria-controls="mcpProjectPopup" aria-label="Voir les détails du serveur MCP Khiops AutoML">
+          <article class="project" aria-labelledby="mcp-project-title">
+            <img src="img/project-01-mcp.jpg" alt="Projet MCP pour Khiops AutoML" />
+            <div class="project-body">
+              <h3 id="mcp-project-title" style="font-size:16px;margin-bottom:2px">Serveur MCP pour Khiops AutoML - Orange</h3>
+              <p class="project-desc">Relier une application AutoML à un LLM. <br/><br/><i><b>Cliquez pour en savoir plus.</b></i></p>
+              <div class="project-tech">MCP, Python, OpenShift</div>
+            </div>
+          </article>
+        </a>
+
+        <a href="#ragProjectPopup" class="project-link project-modal-trigger" aria-haspopup="dialog" aria-controls="ragProjectPopup" aria-label="Voir les détails de l'assistant documentaire Khiops basé sur RAG">
+          <article class="project" aria-labelledby="rag-project-title">
+            <img src="img/project-02-rag.jpg" alt="Assistant documentaire Khiops basé sur RAG" />
+            <div class="project-body">
+              <h3 id="rag-project-title" style="font-size:16px;margin-bottom:2px">Assistant documentaire Khiops - RAG</h3>
+              <p class="project-desc">Recherche hybride dans la documentation Khiops. <br/><br/><i><b>Cliquez pour en savoir plus.</b></i></p>
+              <div class="project-tech">RAG, Python, Qdrant, MCP</div>
+            </div>
+          </article>
+        </a>
+
           <!-- ######################## PROJET 1 ######################## -->
         <a href="https://github.com/MorganPhlp/oikos" class="project-link" target="_blank">
           <article class="project" aria-labelledby="proj1-title">
-            <img src="img/projet1.png" alt="Image du projet 1" />
+            <img src="img/project-03-co2-reduction.png" alt="Image du projet 1" />
             <div class="project-body">
               <h3 id="proj1-title" style="font-size:16px;margin-bottom:2px">Application de réduction de CO2 - Viveris</h3>
               <p class="project-desc">Projet réalisé à 7 pour l'entreprise Viveris pour agir sur l'environnement de manière ludique et moderne.</p>
@@ -84,7 +106,7 @@
         <!-- ######################## PROJET 2 ######################## -->
         <a href="https://github.com/Bakame1/SJTU_digitAC_Recognition" class="project-link" target="_blank">
         <article class="project" aria-labelledby="proj2-title">
-          <img src="img/projet2.jpg" alt="AC_recognition" />
+          <img src="img/project-04-ac-recognition.jpg" alt="AC_recognition" />
           <div class="project-body">
             <h3 id="proj2-title" style="font-size:16px;margin-bottom:0px">Reconnaissance d'image AC - SJTU</h3>
             <p class="project-desc">Lecture de la temperature malgré les variations d'angle, de luminosité ou d'obstacles visuels.</p>
@@ -96,7 +118,7 @@
         <!-- ######################## PROJET 3 ######################## -->
       <a href="https://github.com/Bakame1/Image_Clustering" class="project-link" target="_blank">
         <article class="project" aria-labelledby="proj3-title">
-          <img src="img/projet3.png" alt="Image du projet 3" />
+          <img src="img/project-05-image-clustering.png" alt="Image du projet 3" />
           <div class="project-body">
             <h3 id="proj3-title" style="font-size:16px;margin-bottom:2px">Clustering d'images - Polytech Paris-Saclay</h3>
             <p class="project-desc">Modèle de clustering non supervisé pour regrouper 955 images de snacks en 20 classes.</p>
@@ -108,7 +130,7 @@
 
       <a href="https://github.com/Bakame1/ET5_NLP_Project_IR" class="project-link" target="_blank">
         <article class="project" aria-labelledby="proj4-title">
-          <img src="img/projet4.png" alt="Image du projet 4" />
+          <img src="img/project-06-wikipedia-search.png" alt="Image du projet 4" />
           <div class="project-body">
             <h3 id="proj4-title" style="font-size:16px;margin-bottom:2px">Moteur de recherche Wikipédia - Polytech Paris-Saclay</h3>
             <p class="project-desc">Moteur de recherche sur 2000 fichiers d'articles wikipédia.</p>
@@ -120,7 +142,7 @@
       <!-- ######################## PROJET 5 ######################## -->
       <a href="https://github.com/Bakame1/SJTU_Sentimental_Analysis" class="project-link" target="_blank">
         <article class="project" aria-labelledby="proj5-title">
-          <img src="img/projet5.png" alt="Image du projet 5" />
+          <img src="img/project-07-sentiment-analysis.png" alt="Image du projet 5" />
           <div class="project-body">
             <h3 id="proj5-title" style="font-size:16px;margin-bottom:2px">Analyse sentimental - SJTU</h3>
             <p class="project-desc">Classifier des phrases soit comme négatives soit comme positives.</p>
@@ -252,6 +274,47 @@
       </div>
       </article>
     </section>
+
+<div id="mcpProjectPopup" class="popup-overlay project-popup-overlay">
+  <div class="popup-content project-popup-content" role="dialog" aria-modal="true" aria-labelledby="mcpProjectTitle" aria-describedby="mcpProjectDescription">
+    <button type="button" class="close-project-popup" aria-label="Fermer les détails du projet">&times;</button>
+    <img class="project-popup-image" src="img/project-01-mcp.jpg" alt="Illustration du serveur MCP pour Khiops AutoML" />
+    <h2 id="mcpProjectTitle">Serveur MCP pour Khiops AutoML - Orange</h2>
+    <ul id="mcpProjectDescription" class="project-details">
+      <li>Outils MCP déterministes issus de la bibliothèque Python Khiops.</li>
+      <li>Architecture sans état reposant sur une base de données pour assurer la persistance.</li>
+      <li>Authentification à Google Cloud Storage pour entraîner des modèles de ML directement sur des jeux de données stockés dans GCS.</li>
+      <li>Interception des appels aux outils MCP grâce à une session middleware.</li>
+      <li>Tests avec différents clients MCP : Dinootoo, Prisme AI, GitHub Copilot et Continue sur VS Code.</li>
+    </ul>
+  </div>
+</div>
+
+<div id="ragProjectPopup" class="popup-overlay project-popup-overlay">
+  <div class="popup-content project-popup-content" role="dialog" aria-modal="true" aria-labelledby="ragProjectTitle" aria-describedby="ragProjectDescription">
+    <button type="button" class="close-project-popup" aria-label="Fermer les détails du projet">&times;</button>
+    <img class="project-popup-image" src="img/project-02-rag.jpg" alt="Illustration de l'assistant documentaire Khiops basé sur RAG" />
+    <h2 id="ragProjectTitle">Assistant documentaire Khiops - RAG</h2>
+    <ul id="ragProjectDescription" class="project-details">
+      <li>Analyse de documents aux formats .md, .py, .ipynb et .rst.</li>
+      <li>Découpage des documents en sections à partir de leurs titres.</li>
+      <li>Vectorisation des sections en vecteurs denses (sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2) et clairsemés (BM25).</li>
+      <li>Stockage dans Qdrant sous forme de points uniques contenant les deux vecteurs.</li>
+      <li>Indexation HNSW pour les vecteurs denses et index inversé pour les vecteurs clairsemés.</li>
+      <li>Recherche hybride combinant les classements avec RRF et DBSF.</li>
+      <li>Évaluation avec Recall@k, Precision@k et MRR.</li>
+      <li>Connexion à un LLM via deux outils MCP : l'un renvoie les sections pertinentes, l'autre récupère le contenu d'un document précis.</li>
+    </ul>
+    <a class="link-btn project-github-link" href="https://github.com/Bakame1/khiops_doc_RAG" target="_blank" rel="noopener noreferrer">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 .5C5.73.5.75 5.48.75 11.76c0 4.9 3.17 9.06 7.57 10.53.55.1.75-.24.75-.53v-1.9c-3.08.67-3.73-1.48-3.73-1.48-.5-1.27-1.22-1.61-1.22-1.61-.99-.68.07-.67.07-.67 1.1.08 1.68 1.14 1.68 1.14.97 1.66 2.55 1.18 3.17.9.1-.7.38-1.18.69-1.45-2.46-.28-5.05-1.23-5.05-5.45 0-1.2.43-2.18 1.12-2.95-.11-.28-.49-1.41.11-2.94 0 0 .91-.29 2.98 1.12a10.3 10.3 0 0 1 2.71-.37c.92 0 1.85.12 2.71.37 2.07-1.41 2.98-1.12 2.98-1.12.6 1.53.22 2.66.11 2.94.7.77 1.12 1.76 1.12 2.95 0 4.23-2.6 5.16-5.08 5.43.39.34.73 1.02.73 2.06v3.06c0 .3.2.64.76.53 4.4-1.47 7.57-5.63 7.57-10.53C23.25 5.48 18.27.5 12 .5z" fill="currentColor"/>
+        </svg>
+      </span>
+      <span>Dépôt GitHub</span>
+    </a>
+  </div>
+</div>
 
 <!-- Pop-up de contact (masquée par défaut) -->
 <div id="contactPopup" class="popup-overlay">
